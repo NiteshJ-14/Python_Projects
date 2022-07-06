@@ -1,0 +1,19 @@
+from question_model import Question
+from data import question_data
+from quiz_brain import QuizBrain
+
+question_bank=[]
+for i in question_data:
+  a=i["text"]
+  b=i["answer"]
+  c=Question(a,b)
+  question_bank.append(c)
+
+d=QuizBrain(question_bank)
+cond=d.still_has_qn() 
+while cond:
+  d.next_question()
+
+print(d.end())
+
+

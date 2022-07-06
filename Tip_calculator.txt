@@ -1,0 +1,8 @@
+print("Welcome to the tip calculator!")
+a=float(input("Enter Total bill amount\n"))
+b=int(input("Enter no of shares\n"))
+c=int(input("Enter no of tips percentage: 8 or 10 or 12\n"))
+tip=a*c/100
+amount=a+tip
+share=amount/b
+print(f"The amount to be shared is {share}")

@@ -1,0 +1,10 @@
+import random
+# Split string method
+names_string = input("Enter names\n")
+names = names_string.split(", ")
+print(names)
+l=len(names)
+print(l)
+payer=random.randint(0,l-1)
+print(payer)
+print(f"{names[payer]} is going to buy meal today")

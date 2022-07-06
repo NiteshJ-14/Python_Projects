@@ -1,0 +1,30 @@
+import random
+b=random.randint(1,100)
+print(b)
+
+def check(n):
+  cond=True
+  while cond:
+    a=n+1
+    print(f"You have {a-1} attempts remaining to guess the number.")
+    guess=int(input("Make a guess:"))
+    if guess<b:
+      print("Too low")
+      n-=1
+    elif guess>b:
+      print("Too high")
+      n-=1
+    else:
+      print(f"You got it! The answer was {b}.")
+      cond=False
+    if n==0:
+      cond=False
+      print("You lost")
+
+choice=input("Welcome to the Number Guessing Game!\nI'm thinking of number between 1 to 100.\nChoose a difficulty. Type 'easy' or 'hard':")
+if choice=="easy":
+  n=10
+  check(n)
+else:
+  n=5
+  check(n)
